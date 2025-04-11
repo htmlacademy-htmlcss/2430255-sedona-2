@@ -2,6 +2,7 @@
 
 - Студент: [Иван Шуклин](https://up.htmlacademy.ru/htmlcss-individual/2/user/2430255).
 - Наставник: [Екатерина Комнатная](https://htmlacademy.ru/profile/id215761).
+- Сайт: [Мой проект Седона](https://ivanshuklin.github.io/sedona/)
 
 ---
 
