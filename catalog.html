@@ -184,16 +184,26 @@
                   />
                 </label>
               </div>
-              <input
-                class="range-slider"
-                type="range"
-                id="price-range"
-                name="price-range"
-                min="0"
-                max="12000"
-                value="9000"
-                step="100"
-              />
+              <div class="range-slider">
+                <input
+                  class="range-input range-input-min"
+                  type="range"
+                  name="price-min-range"
+                  min="0"
+                  max="12000"
+                  value="0"
+                  step="100"
+                />
+                <input
+                  class="range-input range-input-max"
+                  type="range"
+                  name="price-max-range"
+                  min="0"
+                  max="12000"
+                  value="9000"
+                  step="100"
+                />
+              </div>
             </fieldset>
             <button class="button catalog-filter-submit" type="submit">
               Применить
