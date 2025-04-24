@@ -53,6 +53,7 @@ body {
 }
 
 .button {
+  height: 36px;
   border: none;
   border-radius: 4px;
   font-family: inherit;
@@ -119,7 +120,6 @@ body {
 
 .navigation-button {
   width: 160px;
-  height: 36px;
   align-self: center;
   align-content: center;
   text-align: center;
@@ -345,7 +345,17 @@ body {
   line-height: 26px;
 }
 
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+}
+
 .subscribe-input {
+  width: 452px;
+  height: 52px;
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
   border: none;
   font-family: inherit;
   font-size: inherit;
@@ -354,6 +364,10 @@ body {
 }
 
 .subscribe-button {
+  width: 232px;
+  height: 52px;
+  margin: 0;
+  padding: 0;
   font-size: 22px;
   line-height: 26px;
 }
@@ -386,6 +400,7 @@ body {
 }
 
 .filter-wrapper {
+  padding: 70px 0;
   background-image: url("../images/filter-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -393,7 +408,12 @@ body {
   background-color: #82b3d3;
 }
 
-.inner-hero-title {
+.filter-header {
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.filter-header-title {
   margin: 0;
   font-size: 60px;
   line-height: 78px;
@@ -402,6 +422,7 @@ body {
 
 .breadcrumbs {
   margin: 0;
+  margin-bottom: 40px;
   padding: 0;
   list-style-type: none;
 }
@@ -414,9 +435,20 @@ body {
 
 .catalog-filter {
   display: flex;
+  justify-content: space-between;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.catalog-filter-group {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 .catalog-filter-title {
+  margin-bottom: 32px;
+  padding: 0;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -451,6 +483,15 @@ body {
   height: 100%;
 }
 
+.buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.catalog-filter-reset {
+}
+
 .catalog-filter-reset {
   background: transparent;
 }
@@ -461,7 +502,14 @@ body {
   padding-top: 50px;
 }
 
+.catalog-header {
+  display: flex;
+  margin-bottom: 40px;
+}
+
 .catalog-title {
+  margin: 0;
+  margin-right: auto;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -470,16 +518,34 @@ body {
 }
 
 .catalog-select {
+  width: 292px;
+  height: 49px;
+  margin-right: 70px;
+  padding: 0 20px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  background-color: #f2f2f2;
 }
 
 .catalog-view {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.catalog-view-item {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.catalog-view-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .product-list {

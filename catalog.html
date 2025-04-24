@@ -53,8 +53,8 @@
 
       <main class="main-inner">
         <div class="filter-wrapper">
-          <section class="inner-hero">
-            <h1 class="inner-hero-title">Гостиницы Седоны</h1>
+          <header class="filter-header">
+            <h1 class="filter-header-title">Гостиницы Седоны</h1>
             <ul class="breadcrumbs">
               <li class="breadcrumbs-item">
                 <a class="breadcrumbs-link" href="index.html"
@@ -67,7 +67,7 @@
                 >
               </li>
             </ul>
-          </section>
+          </header>
           <section class="catalog-filters">
             <h2 class="visually-hidden">Фильтры гостиниц</h2>
             <form
@@ -206,42 +206,46 @@
                   />
                 </div>
               </fieldset>
-              <button class="button catalog-filter-submit" type="submit">
-                Применить
-              </button>
-              <button class="button catalog-filter-reset" type="reset">
-                Сбросить
-              </button>
+              <div class="buttons-wrapper">
+                <button class="button catalog-filter-submit" type="submit">
+                  Применить
+                </button>
+                <button class="button catalog-filter-reset" type="reset">
+                  Сбросить
+                </button>
+              </div>
             </form>
           </section>
         </div>
         <section class="catalog">
-          <h2 class="catalog-title">Найдено гостиниц: <span>38</span></h2>
-          <select class="catalog-select" aria-label="Сортировка">
-            <option value="popular">Сначала дешёвые</option>
-            <option value="cheap">Сначала популярные</option>
-            <option value="expensive">Сначала дорогие</option>
-          </select>
-          <ul class="catalog-view">
-            <li class="catalog-view-item">
-              <a
-                class="catalog-view-link catalog-view-link-selected"
-                href="catalog.html?view=tile"
-              >
-                <span class="visually-hidden">Плитка</span>
-              </a>
-            </li>
-            <li class="catalog-view-item">
-              <a class="catalog-view-link" href="catalog.html?view=card">
-                <span class="visually-hidden">Крупно</span>
-              </a>
-            </li>
-            <li class="catalog-view-item">
-              <a class="catalog-view-link" href="catalog.html?view=list">
-                <span class="visually-hidden">Список</span>
-              </a>
-            </li>
-          </ul>
+          <header class="catalog-header">
+            <h2 class="catalog-title">Найдено гостиниц: <span>38</span></h2>
+            <select class="catalog-select" aria-label="Сортировка">
+              <option value="popular">Сначала дешёвые</option>
+              <option value="cheap">Сначала популярные</option>
+              <option value="expensive">Сначала дорогие</option>
+            </select>
+            <ul class="catalog-view">
+              <li class="catalog-view-item">
+                <a
+                  class="catalog-view-link catalog-view-link-selected"
+                  href="catalog.html?view=tile"
+                >
+                  <span class="visually-hidden">Плитка</span>
+                </a>
+              </li>
+              <li class="catalog-view-item">
+                <a class="catalog-view-link" href="catalog.html?view=card">
+                  <span class="visually-hidden">Крупно</span>
+                </a>
+              </li>
+              <li class="catalog-view-item">
+                <a class="catalog-view-link" href="catalog.html?view=list">
+                  <span class="visually-hidden">Список</span>
+                </a>
+              </li>
+            </ul>
+          </header>
           <ul class="product-list">
             <li class="product-card">
               <a class="product-card-link" href="#">
