@@ -191,7 +191,7 @@ body {
   flex-direction: row-reverse;
 }
 
-.advantages-item:nth-child(even):not(.advantages-item-special) {
+.advantages-item:nth-child(odd):not(.advantages-item-special) {
   background-color: #83b3d333;
 }
 
