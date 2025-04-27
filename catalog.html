@@ -156,10 +156,9 @@
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
               <div class="price-controls">
-                <label>
-                  от
+                <label class="price-control">
                   <input
-                    class="price-input"
+                    class="price-control-input"
                     type="number"
                     id="price-min"
                     name="price-min"
@@ -167,11 +166,11 @@
                     max="12000"
                     value="0"
                   />
+                  от
                 </label>
-                <label>
-                  до
+                <label class="price-control">
                   <input
-                    class="price-input"
+                    class="price-control-input"
                     type="number"
                     id="price-max"
                     name="price-max"
@@ -179,6 +178,7 @@
                     max="12000"
                     value="9000"
                   />
+                  до
                 </label>
               </div>
               <div class="range-slider">
@@ -309,7 +309,7 @@
               <button class="button favorite-card" type="button">
                 В избранное
               </button>
-              <p class="stars four-stars">
+              <p class="stars three-stars">
                 <span class="visually-hidden">Отель 3 звезды</span>
               </p>
               <p class="product-card-rating">Рейтинг: 6,9</p>
@@ -331,7 +331,7 @@
               <button class="button favorite-card" type="button">
                 В избранное
               </button>
-              <p class="stars four-stars">
+              <p class="stars two-stars">
                 <span class="visually-hidden">Отель 2 звезды</span>
               </p>
               <p class="product-card-rating">Рейтинг: 5,0</p>
