@@ -21,12 +21,12 @@
           <ul class="navigation-list">
             <li class="navigation-item">
               <a class="navigation-link" href="index.html"
-                ><span class="navigation-text">Главная</span></a
+                ><span class="navigation-link-text">Главная</span></a
               >
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="#"
-                ><span class="navigation-text">О Седоне</span></a
+                ><span class="navigation-link-text">О Седоне</span></a
               >
             </li>
             <li class="navigation-item">
@@ -34,21 +34,47 @@
                 class="navigation-link navigation-link-current"
                 href="#"
                 aria-current="page"
-                ><span class="navigation-text">Гостиницы</span></a
+                ><span class="navigation-link-text">Гостиницы</span></a
               >
             </li>
           </ul>
           <ul class="user-menu">
             <li class="user-menu-item">
-              <a class="user-menu-link" href="#"
-                ><span class="visually-hidden">Поиск</span></a
-              >
+              <a class="user-menu-link" href="#">
+                <span class="visually-hidden">Поиск</span>
+                <svg
+                  class="user-menu-icon icon-search"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="19"
+                  height="19"
+                  fill="none"
+                  viewBox="0 0 19 19"
+                >
+                  <path
+                    fill="#000"
+                    d="m18.5 17-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87A8 8 0 0 0 8.5.5C4.1.5.5 4.18.5 8.56a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z"
+                  />
+                </svg>
+              </a>
             </li>
             <li class="user-menu-item">
-              <a class="user-menu-link" href="#"
-                ><span class="visually-hidden">Избранное</span>
-                <span class="likes-number">12</span></a
-              >
+              <a class="user-menu-link" href="#">
+                <span class="visually-hidden">Избранное</span>
+                <svg
+                  class="user-menu-icon icon-favorite"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="17"
+                  fill="none"
+                  viewBox="0 0 18 17"
+                >
+                  <path
+                    fill="#000"
+                    d="M8.9 17a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9A5.4 5.4 0 0 1 5.5 0C6.8 0 8 .5 9 1.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"
+                  />
+                </svg>
+                <span class="likes-number">12</span>
+              </a>
             </li>
           </ul>
           <a class="button navigation-button" href="#">Хочу сюда!</a>
@@ -176,7 +202,7 @@
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
               <div class="price-controls">
-                <label class="price-control">
+                <label class="price-control" for="price-min">
                   <input
                     class="price-control-input"
                     type="number"
@@ -188,7 +214,7 @@
                   />
                   <span class="price-control-label">от</span>
                 </label>
-                <label class="price-control">
+                <label class="price-control" for="price-max">
                   <input
                     class="price-control-input"
                     type="number"
@@ -244,22 +270,59 @@
               <option value="expensive">Сначала дорогие</option>
             </select>
             <ul class="catalog-view">
-              <li class="catalog-view-item">
+              <li>
                 <a
                   class="catalog-view-link catalog-view-link-selected"
-                  href="catalog.html?view=tile"
+                  href="#"
+                  aria-current="page"
                 >
-                  <span class="visually-hidden">Плитка</span>
+                  <span class="visually-hidden">Показать плиткой</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="14"
+                    fill="none"
+                    viewBox="0 0 16 14"
+                  >
+                    <path
+                      fill="#000"
+                      d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z"
+                    />
+                  </svg>
                 </a>
               </li>
-              <li class="catalog-view-item">
-                <a class="catalog-view-link" href="catalog.html?view=card">
-                  <span class="visually-hidden">Крупно</span>
+              <li>
+                <a class="catalog-view-link" href="#">
+                  <span class="visually-hidden">Показать карточками</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="14"
+                    fill="none"
+                    viewBox="0 0 16 14"
+                  >
+                    <path
+                      fill="#000"
+                      d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z"
+                    />
+                  </svg>
                 </a>
               </li>
-              <li class="catalog-view-item">
-                <a class="catalog-view-link" href="catalog.html?view=list">
-                  <span class="visually-hidden">Список</span>
+              <li>
+                <a class="catalog-view-link" href="#">
+                  <span class="visually-hidden">Показать списком</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="14"
+                    fill="none"
+                    viewBox="0 0 16 14"
+                  >
+                    <path
+                      fill="#000"
+                      d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z"
+                    />
+                  </svg>
                 </a>
               </li>
             </ul>
@@ -476,13 +539,32 @@
           </li>
         </ul>
         <a class="phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        <a class="logo" href="https://htmlacademy.ru/intensive/htmlcss"
-          ><img
-            src="images/brand-htmlacademy.svg"
+        <a class="academy-logo" href="https://htmlacademy.ru/intensive/htmlcss">
+          <svg
+            class="academy-icon"
+            role="img"
+            aria-label="Логотип HTML Academy"
+            xmlns="http://www.w3.org/2000/svg"
             width="115"
             height="33"
-            alt="HTML academy logo"
-        /></a>
+            fill="none"
+            viewBox="0 0 115 33"
+          >
+            <g clip-path="url(#a)">
+              <path
+                fill="#000"
+                fill-rule="evenodd"
+                d="M8 6.2c.8-1 2-1.7 3.6-1.7 2.7 0 4.6 1.9 4.5 4.9v6.1h-2V9.8c0-1.8-1.1-3.2-2.9-3.2-2 0-3.3 1.5-3.3 3.6v5.3h-2V0h2v6.2H8Zm-8 9.3v-2.6h2.5v2.6H0ZM26.6 4.8h-4.8V1.1h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V6.8h4.8v-2Zm11 1.9c.6-1.3 1.9-2.1 3.5-2.1 2.5 0 4 1.8 3.9 4.3v6.5h-2V9.1c0-1.6-.9-2.6-2.4-2.6-1.2 0-2.6.9-2.6 3.3v5.6h-2V9.1c0-1.6-.9-2.6-2.4-2.6C32 6.5 31 8 31 10v5.4h-2V4.8h1.9v1.6h.1c.6-1 1.7-1.8 3.1-1.8 1.6 0 2.8.9 3.4 2.1h.1Zm10.2 6c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V0h-2v12.7ZM25 17.9c1.7 0 3 .7 3.9 1.8v-1.5h2v10.6h-2v-1.6h-.1c-.8 1.1-2 1.9-3.8 1.9-3.1 0-5.4-2.3-5.4-5.6s2.3-5.6 5.4-5.6Zm-3.3 5.6c0 2 1.4 3.6 3.6 3.6s3.6-1.7 3.6-3.6c0-2-1.4-3.6-3.6-3.6s-3.6 1.6-3.6 3.6ZM44.2 22c-.5-2.4-2.6-4.1-5.4-4.1a5.4 5.4 0 0 0-5.6 5.6c0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1a3.4 3.4 0 0 1-3.3 2.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6c1.6 0 2.8 1 3.3 2.2h2.1V22Zm7-4.1c1.7 0 3 .7 3.9 1.8v-1.5h2v10.6h-2v-1.6H55c-.8 1.1-2 1.9-3.8 1.9-3.1 0-5.4-2.3-5.4-5.6s2.3-5.6 5.4-5.6Zm-3.3 5.6c0 2 1.4 3.6 3.6 3.6 2.1 0 3.6-1.7 3.6-3.6 0-2-1.4-3.6-3.6-3.6s-3.6 1.6-3.6 3.6Zm20.8-3.7c-.9-1.1-2.2-1.9-3.9-1.9-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.4h-2v6.4Zm-3.6 7.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6Zm7.7-3.6c0-3.1 2.2-5.6 5.5-5.6 3.5 0 5.7 2.7 5.5 6.3H75c.1 1.6 1.5 2.9 3.4 2.9 1.4 0 2.5-.6 3-1.6h2.1c-.7 2.3-2.7 3.6-5.2 3.6-3.4 0-5.5-2.6-5.5-5.6Zm8.8-1.1c-.3-1.6-1.6-2.6-3.3-2.6-1.7 0-2.9 1.1-3.2 2.6h6.5Zm16.6-4.5c-1.6 0-2.9.8-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4Zm7.6.2 3.6 8.9 3.4-8.9h2.1l-4.7 12.2c-.7 1.8-1.7 2.6-3.5 2.6h-2.5v-2h2.5c1 0 1.4-.3 1.7-1.2l-4.8-11.6h2.2Z"
+                clip-rule="evenodd"
+              />
+            </g>
+            <defs>
+              <clipPath id="a">
+                <path fill="#fff" d="M0 0h114.9v32.9H0z" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
       </footer>
     </div>
   </body>
