@@ -463,7 +463,7 @@ body {
 }
 
 .subscribe {
-  padding: 100px 0;
+  padding: 96px 0 104px;
   text-align: center;
 }
 
@@ -619,6 +619,46 @@ body {
 
 .academy-logo:active .academy-icon path {
   fill: #7561574d;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2cc;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  border-radius: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 25px 50px 0 #00000026;
+}
+
+.modal-auth {
+  width: 576px;
+}
+
+.modal-close-button {
+  padding: 0;
+  width: 52px;
+  height: 52px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 50%;
+  background-image: url("../images/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
 }
 
 /* ////////////////////////////////////////////////////// */

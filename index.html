@@ -337,6 +337,68 @@
           </svg>
         </a>
       </footer>
+
+      <div class="modal-container is-hidden">
+        <div class="modal modal-auth">
+          <section class="modal-content">
+            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+            <button class="modal-close-button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+            <form
+              class="auth-form"
+              action="https://echo.htmlacademy.ru"
+              method="post"
+            >
+              <p class="field-group">
+                <label for="check-in">Дата заезда:</label>
+                <input
+                  class="auth-form-field field"
+                  type="date"
+                  id="check-in"
+                  name="check-in"
+                  required
+                />
+              </p>
+              <p class="field-group">
+                <label for="check-out">Дата выезда:</label>
+                <input
+                  class="auth-form-field field"
+                  type="date"
+                  id="check-out"
+                  name="check-out"
+                  required
+                />
+              </p>
+              <p class="field-group">
+                <label for="adults">Взрослые:</label>
+                <input
+                  class="auth-form-field field"
+                  type="number"
+                  id="adults"
+                  name="adults"
+                  min="1"
+                  value="2"
+                  required
+                />
+              </p>
+              <p class="field-group">
+                <label for="children">Дети:</label>
+                <input
+                  class="auth-form-field field"
+                  type="number"
+                  id="children"
+                  name="children"
+                  min="0"
+                  value="2"
+                />
+              </p>
+              <button class="button" type="submit">Найти</button>
+            </form>
+          </section>
+        </div>
+      </div>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
