@@ -342,7 +342,7 @@
         <div class="modal modal-auth">
           <section class="modal-content">
             <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-            <button class="modal-close-button">
+            <button class="modal-close-button" type="button">
               <span class="visually-hidden">Закрыть</span>
             </button>
             <form
@@ -350,49 +350,105 @@
               action="https://echo.htmlacademy.ru"
               method="post"
             >
-              <p class="field-group">
+              <div class="field-group field-date-checkin">
                 <label for="check-in">Дата заезда:</label>
                 <input
-                  class="auth-form-field field"
-                  type="date"
+                  class="auth-form-field field-wide"
+                  type="text"
                   id="check-in"
                   name="check-in"
+                  value="27 апреля 2020"
                   required
                 />
-              </p>
-              <p class="field-group">
+                <span class="form-hint form-hint-error">
+                  Мы не можем отправить вас в прошлое.
+                </span>
+              </div>
+              <div class="field-group field-date-checkout">
                 <label for="check-out">Дата выезда:</label>
                 <input
-                  class="auth-form-field field"
-                  type="date"
+                  class="auth-form-field field-wide"
+                  type="text"
                   id="check-out"
                   name="check-out"
+                  value="1 сентября 2023"
                   required
                 />
-              </p>
-              <p class="field-group">
+                <span class="form-hint form-hint-success">
+                  На эти даты есть свободные номера. Пока есть.
+                </span>
+              </div>
+              <div class="field-group field-adults">
                 <label for="adults">Взрослые:</label>
-                <input
-                  class="auth-form-field field"
-                  type="number"
-                  id="adults"
-                  name="adults"
-                  min="1"
-                  value="2"
-                  required
-                />
-              </p>
-              <p class="field-group">
+                <div class="number-input-wrapper">
+                  <button class="btn-minus" type="button">
+                    <span class="visually-hidden">Убавить</span>
+                  </button>
+                  <input
+                    class="auth-form-field field-narrow"
+                    type="number"
+                    id="adults"
+                    name="adults"
+                    min="1"
+                    value="2"
+                    required
+                  />
+                  <button class="btn-plus" type="button">
+                    <span class="visually-hidden">Добавить</span>
+                  </button>
+                </div>
+              </div>
+              <div class="field-group field-children">
                 <label for="children">Дети:</label>
-                <input
-                  class="auth-form-field field"
-                  type="number"
-                  id="children"
-                  name="children"
-                  min="0"
-                  value="2"
-                />
-              </p>
+                <span class="tooltip">
+                  <button
+                    class="tooltip-toggle"
+                    type="button"
+                    aria-labelledby="tooltip-label-date"
+                  >
+                    <svg
+                      class="tooltip-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="2"
+                      height="12"
+                      fill="none"
+                      viewBox="0 0 2 12"
+                    >
+                      <path
+                        fill="#fff"
+                        fill-rule="evenodd"
+                        d="M0 0h2v2H0V0Zm2 12H0V3h2v9Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span
+                      class="tooltip-text"
+                      role="tooltip"
+                      id="tooltip-label-date"
+                    >
+                      Укажите количество детей, которые будут с вами, возраст
+                      которых от 6 до 18 лет. Дети до 6 лет размещаются
+                      бесплатно.
+                    </span>
+                  </button>
+                </span>
+                <div class="number-input-wrapper">
+                  <button class="btn-minus" type="button">
+                    <span class="visually-hidden">Убавить</span>
+                  </button>
+                  <input
+                    class="auth-form-field field-narrow"
+                    type="number"
+                    id="children"
+                    name="children"
+                    min="0"
+                    value="2"
+                  />
+                  <button class="btn-plus" type="button">
+                    <span class="visually-hidden">Добавить</span>
+                  </button>
+                </div>
+              </div>
               <button class="button" type="submit">Найти</button>
             </form>
           </section>
