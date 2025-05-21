@@ -637,16 +637,17 @@ body {
   display: none;
 }
 
+.modal-open {
+  overflow: hidden;
+}
+
 .modal {
+  width: 717px;
   margin: auto;
   padding: 64px 70px;
   border-radius: 30px;
   background-color: #ffffff;
   box-shadow: 0 25px 50px 0 #00000026;
-}
-
-.modal-auth {
-  width: 717px;
 }
 
 .modal-content {
@@ -655,44 +656,86 @@ body {
 
 .modal-title {
   margin: 0 0 64px;
+  padding-right: 40px;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  color: #000000;
 }
 
 .modal-close-button {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 0;
-  left: 450px;
+  right: -19px;
   padding: 0;
   width: 52px;
   height: 52px;
   background-color: #f2f2f2;
   border: none;
   border-radius: 50%;
-  background-image: url("../images/close.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
 }
 
-.auth-form {
+.modal-close-button:hover {
+  background-color: #e5e5e5;
+}
+
+.modal-close-button:focus {
+  background-color: #e5e5e5;
+  outline: 3px solid #83b3d3;
+}
+
+.modal-close-button:active {
+  outline: none;
+  background-color: #e5e5e5;
+}
+
+.modal-close-button:active svg {
+  opacity: 0.3;
+}
+
+.hotel-search-form {
   display: grid;
   grid-template-columns: 247px 242px;
   gap: 48px 88px;
   width: 100%;
 }
 
-.auth-form-field {
+.form-label {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.search-form-field {
   height: 48px;
   padding: 0 20px;
   border: none;
-  border-radius: 4px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
   background-color: #f2f2f2;
+  color: #000000;
 }
 
-.field-date-checkin,
-.field-date-checkout {
+.search-form-field:hover {
+  background-color: #e5e5e5;
+}
+
+.search-form-field:focus {
+  background-color: #e5e5e5;
+  outline: 3px solid #83b3d3;
+}
+
+.checkin-group,
+.checkout-group {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -703,10 +746,12 @@ body {
 .form-hint {
   position: absolute;
   top: 100%;
-  margin-top: 4px;
-  font-size: 16px;
-  line-height: 20px;
   left: 0;
+  max-height: 44px;
+  margin-top: 4px;
+  padding: 0 10px 0 157px;
+  font-size: 16px;
+  line-height: 21px;
 }
 
 .form-hint-error {
@@ -717,14 +762,23 @@ body {
   color: #333333;
 }
 
-.field-wide {
+.date-input {
+  position: relative;
   width: 440px;
+  padding-right: 60px;
+  border-radius: 4px;
+  background-image: url("../images/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: right 22px center;
+  background-size: 16px 15px;
 }
 
-.field-narrow {
+.number-input {
+  position: relative;
   width: 31px;
   padding: 0 5px;
   text-align: center;
+  z-index: 1;
 }
 
 .number-input-wrapper {
@@ -746,47 +800,6 @@ body {
   grid-column: 2 / -1;
 }
 
-.btn-minus,
-.btn-plus {
-  position: relative;
-  width: 40px;
-  height: 48px;
-  background-color: #f2f2f2;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-minus::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 14px;
-  height: 2px;
-  background-color: #7561574d;
-}
-
-.btn-plus::before,
-.btn-plus::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #7561574d;
-}
-
-.btn-plus::before {
-  width: 14px;
-  height: 2px;
-}
-
-.btn-plus::after {
-  width: 2px;
-  height: 14px;
-}
-
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -795,6 +808,67 @@ input[type="number"]::-webkit-inner-spin-button {
 
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+.btn-minus,
+.btn-plus {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 48px;
+  border: none;
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.btn-minus::after,
+.btn-plus::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: none;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+.btn-minus:focus::after,
+.btn-plus:focus::after {
+  box-shadow: 0 0 0 3px #82b3d3;
+}
+
+.btn-minus {
+  border-radius: 4px 0 0 4px;
+}
+
+.btn-plus {
+  border-radius: 0 4px 4px 0;
+}
+
+.btn-minus:hover svg path,
+.btn-plus:hover svg path {
+  fill: #000000;
+}
+
+.btn-minus:focus,
+.btn-plus:focus {
+  outline: none;
+}
+
+.btn-minus:focus svg path,
+.btn-plus:focus svg path {
+  fill: #000000;
+}
+
+.btn-minus:active svg,
+.btn-plus:active svg {
+  opacity: 0.2;
 }
 
 .tooltip {
@@ -818,6 +892,14 @@ input[type="number"] {
   border: none;
 }
 
+.tooltip-toggle:focus {
+  outline: none;
+}
+
+.tooltip-toggle:focus .tooltip-text {
+  display: block;
+}
+
 .tooltip-icon {
   display: block;
   width: 2px;
@@ -832,10 +914,12 @@ input[type="number"] {
   left: 50%;
   transform: translateX(-50%);
   margin-top: 15px;
-  padding: 22px;
+  padding: 20px;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: normal;
+  text-align: start;
   text-transform: none;
   border-radius: 10px;
   color: #ffffff;
@@ -862,11 +946,25 @@ input[type="number"] {
   transform: translateX(-50%) rotate(45deg);
 }
 
-.auth-form .button {
+.form-submit {
   height: 60px;
   font-size: 20px;
   line-height: 24px;
   grid-column: 1 / -1;
+}
+
+.form-submit:hover {
+  background-color: #68a2ca;
+}
+
+.form-submit:focus {
+  background-color: #68a2ca;
+  outline: none;
+}
+
+.form-submit:active {
+  background-color: #68a2ca;
+  color: #ffffff4d;
 }
 
 /* ////////////////////////////////////////////////////// */
