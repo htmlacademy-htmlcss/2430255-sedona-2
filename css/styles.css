@@ -887,9 +887,14 @@ input[type="number"] {
 
 .tooltip-toggle {
   display: block;
-  margin: 0;
-  padding: 0;
+  width: 2px;
+  height: 12px;
+  background-image: url("../images/tooltip-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   border: none;
+  padding: 0;
 }
 
 .tooltip-toggle:focus {
