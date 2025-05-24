@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="icon" href="images/favicon.svg" />
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
   </head>
   <body>
     <div class="page-container">
@@ -364,7 +365,7 @@
               method="post"
             >
               <div class="form-group checkin-group">
-                <label class="form-label" for="check-in">Дата заезда:</label>
+                <label class="form-label" for="check-in">Дата Заезда:</label>
                 <input
                   class="search-form-field date-input"
                   type="text"
@@ -379,7 +380,7 @@
                 </span>
               </div>
               <div class="form-group checkout-group">
-                <label class="form-label" for="check-out">Дата выезда:</label>
+                <label class="form-label" for="check-out">Дата Выезда:</label>
                 <input
                   class="search-form-field date-input"
                   type="text"
@@ -441,17 +442,15 @@
                     class="tooltip-toggle"
                     type="button"
                     aria-labelledby="tooltip-label-date"
+                  ></button>
+                  <span
+                    class="tooltip-text"
+                    role="tooltip"
+                    id="tooltip-label-date"
                   >
-                    <span
-                      class="tooltip-text"
-                      role="tooltip"
-                      id="tooltip-label-date"
-                    >
-                      Укажите количество детей, которые будут с вами, возраст
-                      которых от 6 до 18 лет. Дети до 6 лет размещаются
-                      бесплатно.
-                    </span>
-                  </button>
+                    Укажите количество детей, которые будут с вами, возраст
+                    которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                  </span>
                 </span>
                 <div class="number-input-wrapper">
                   <button class="btn-minus" type="button">

@@ -85,7 +85,6 @@ body {
 .navigation {
   position: relative;
   display: flex;
-  margin: 0 auto;
 }
 
 .navigation-logo {
@@ -95,14 +94,23 @@ body {
   z-index: 1;
 }
 
-.navigation-logo:focus {
+.navigation-logo[href]:hover {
+  opacity: 0.8;
+}
+
+.navigation-logo[href]:focus {
   outline: none;
+  opacity: 0.8;
+}
+
+.navigation-logo[href]:active {
+  opacity: 1;
 }
 
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 0 0 170px;
+  margin: 0 0 0 168px;
   padding: 0;
   list-style-type: none;
 }
@@ -223,13 +231,14 @@ body {
 .index-hero {
   position: relative;
   overflow: hidden;
-  padding-top: 50px;
-  padding-bottom: 80px;
+  min-height: 485px;
+  padding-top: 51px;
+  padding-bottom: 78px;
   text-align: center;
   background-image: url("../images/hero-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: #82b3d3;
+  background-color: #26343f;
   z-index: 0;
 }
 
@@ -246,7 +255,7 @@ body {
 }
 
 .advantages {
-  padding-top: 70px;
+  padding-top: 69px;
   text-align: center;
 }
 
@@ -311,7 +320,6 @@ body {
   margin: 0 0 62px;
   font-size: 24px;
   line-height: 28px;
-  font-weight: 700;
   text-transform: uppercase;
   color: #000000;
 }
@@ -473,7 +481,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   color: #ffffff;
-  background-color: #82b3d3;
+  background-color: #26343f;
 }
 
 .subscribe-special .subscribe-title {
@@ -549,7 +557,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 70px 35px;
+  padding: 45px 70px 35px;
 }
 
 .social {
@@ -872,13 +880,13 @@ input[type="number"] {
 }
 
 .tooltip {
+  position: relative;
   margin: 0 auto 0 10px;
   padding: 0;
 }
 
 .tooltip-toggle {
   display: block;
-  position: relative;
   width: 26px;
   height: 26px;
   border: none;
@@ -896,14 +904,9 @@ input[type="number"] {
   outline: none;
 }
 
-.tooltip-toggle:focus .tooltip-text {
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
   display: block;
-}
-
-.tooltip-icon {
-  display: block;
-  width: 2px;
-  height: 12px;
 }
 
 .tooltip-text {
@@ -928,11 +931,6 @@ input[type="number"] {
   z-index: 1;
 }
 
-.tooltip:hover .tooltip-text,
-.tooltip:focus .tooltip-text {
-  display: block;
-}
-
 .tooltip-text:after {
   content: "";
   position: absolute;
@@ -950,6 +948,7 @@ input[type="number"] {
   height: 60px;
   font-size: 20px;
   line-height: 24px;
+  border-radius: 10px;
   grid-column: 1 / -1;
 }
 
@@ -980,7 +979,7 @@ input[type="number"] {
   background-size: cover;
   background-repeat: no-repeat;
   color: #ffffff;
-  background-color: #82b3d3;
+  background-color: #26343f;
 }
 
 .filter-title {
@@ -1344,6 +1343,7 @@ input[type="number"] {
 .catalog-sort {
   display: flex;
   align-items: center;
+  min-height: 49px;
   margin-bottom: 40px;
 }
 
@@ -1437,6 +1437,7 @@ input[type="number"] {
   gap: 16px 20px;
   align-items: center;
   width: 340px;
+  min-height: 438px;
   padding: 20px;
   box-shadow: 0 0 0 1px #e6e6e6;
   border-radius: 4px;
