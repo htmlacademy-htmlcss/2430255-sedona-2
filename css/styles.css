@@ -600,6 +600,7 @@ body {
 }
 
 .phone {
+  max-width: 600px;
   font-size: 40px;
   line-height: 40px;
   text-decoration: none;
@@ -1620,14 +1621,14 @@ input[type="number"] {
   background-color: #82b3d3;
 }
 
-.pagination-link:hover,
-.pagination-link:focus {
+.pagination-link[href]:hover,
+.pagination-link[href]:focus {
   border: 1px solid #82b3d3;
   background-color: #68a2ca;
   outline: none;
 }
 
-.pagination-link:active {
+.pagination-link[href]:active {
   color: #ffffff4d;
 }
 
@@ -1645,10 +1646,6 @@ input[type="number"] {
 }
 
 .pagination-more {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 60px;
   color: #000000;
+  background-color: transparent;
 }
