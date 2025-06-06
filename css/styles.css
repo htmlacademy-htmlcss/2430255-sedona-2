@@ -27,6 +27,16 @@
   box-sizing: border-box;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 html {
   height: 100%;
 }
@@ -87,6 +97,7 @@ body {
 }
 
 .page-header {
+  min-height: 64px;
   padding: 0 70px;
 }
 
@@ -133,9 +144,6 @@ body {
   text-align: center;
   text-decoration: none;
   color: #000000;
-}
-
-.navigation-link {
   outline: none;
 }
 
@@ -218,6 +226,7 @@ body {
   align-self: center;
   width: 160px;
   background-color: #756157;
+  flex-shrink: 0;
 }
 
 .navigation-button:hover,
@@ -827,16 +836,6 @@ body {
   grid-column: 2 / -1;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
 .btn-minus,
 .btn-plus {
   position: relative;
@@ -950,7 +949,7 @@ input[type="number"] {
   z-index: 10;
 }
 
-.tooltip-text:after {
+.tooltip-text::after {
   content: "";
   position: absolute;
   width: 19px;
@@ -1248,12 +1247,6 @@ input[type="number"] {
   outline: none;
 }
 
-.price-control-input::-webkit-outer-spin-button,
-.price-control-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 .price-control-label {
   line-height: 24px;
   color: #0000004d;
@@ -1473,6 +1466,7 @@ input[type="number"] {
 
 .product-card-link {
   grid-column: 1 / -1;
+  height: 100%;
   text-decoration: none;
 }
 
