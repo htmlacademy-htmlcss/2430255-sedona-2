@@ -147,28 +147,33 @@ body {
   outline: none;
 }
 
-.navigation-link-text {
-  position: relative;
+.navigation-link:hover,
+.navigation-link:focus {
+  color: #00000099;
 }
 
-.navigation-link-current .navigation-link-text::after {
+.navigation-link:active {
+  color: #0000004d;
+}
+
+.navigation-link-current::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: -20px;
-  width: 100%;
+  left: 16px;
+  right: 16px;
+  bottom: -1px;
   height: 2px;
   background-color: #756257;
   z-index: 1;
 }
 
-.navigation-link:hover .navigation-link-text,
-.navigation-link:focus .navigation-link-text {
-  color: #00000099;
+.navigation-link-current:hover::after,
+.navigation-link-current:focus::after {
+  background-color: #75625799;
 }
 
-.navigation-link:active .navigation-link-text {
-  color: #0000004d;
+.navigation-link-current:active::after {
+  background-color: #7562574d;
 }
 
 .user-menu {

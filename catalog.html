@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="page-container">
-      <header class="page-header">
+      <header class="page-header" data-test="header">
         <nav class="navigation">
           <a class="navigation-logo" href="index.html">
             <img
@@ -22,21 +22,17 @@
           </a>
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link" href="index.html"
-                ><span class="navigation-link-text">Главная</span></a
-              >
+              <a class="navigation-link" href="index.html">Главная</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="#"
-                ><span class="navigation-link-text">О Седоне</span></a
-              >
+              <a class="navigation-link" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
               <a
                 class="navigation-link navigation-link-current"
                 href="#"
                 aria-current="page"
-                ><span class="navigation-link-text">Гостиницы</span></a
+                >Гостиницы</a
               >
             </li>
           </ul>
@@ -83,7 +79,7 @@
         </nav>
       </header>
 
-      <main class="main-inner">
+      <main class="main-inner" data-test="main">
         <section class="filter">
           <h1 class="filter-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
@@ -114,6 +110,7 @@
           </ul>
           <form
             class="catalog-filter"
+            data-test="filter"
             action="https://echo.htmlacademy.ru/"
             method="get"
           >
@@ -243,7 +240,7 @@
           </form>
         </section>
 
-        <section class="catalog">
+        <section class="catalog" data-test="catalog">
           <header class="catalog-sort">
             <h2 class="catalog-title">
               Найдено гостиниц: <span class="catalog-title-count">38</span>
@@ -426,7 +423,7 @@
           </ul>
         </section>
 
-        <section class="subscribe">
+        <section class="subscribe" data-test="subscribe">
           <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
           <p class="subscribe-text">
             Только полезная информация и никакого спама,<br />
@@ -455,7 +452,7 @@
         </section>
       </main>
 
-      <footer class="page-footer">
+      <footer class="page-footer" data-test="footer">
         <ul class="social">
           <li class="social-item">
             <a class="social-link" href="https://vk.com/htmlacademy"
