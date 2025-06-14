@@ -538,7 +538,7 @@ body {
 
 .subscribe-input {
   width: 452px;
-  height: 52px;
+  min-height: 52px;
   margin: 0;
   padding: 0 20px;
   border: none;
@@ -1571,6 +1571,10 @@ body {
   align-self: center;
 }
 
+.stars.one-stars {
+  width: 24px;
+}
+
 .stars.two-stars {
   width: 48px;
 }
@@ -1581,6 +1585,10 @@ body {
 
 .stars.four-stars {
   width: 96px;
+}
+
+.stars.five-stars {
+  width: 120px;
 }
 
 .product-card-rating {
