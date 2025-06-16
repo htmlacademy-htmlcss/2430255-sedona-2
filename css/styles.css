@@ -129,6 +129,7 @@ body {
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
+  max-width: 500px;
   margin: 0 0 0 168px;
   padding: 0;
   list-style-type: none;
@@ -179,8 +180,9 @@ body {
 .user-menu {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   flex-wrap: wrap;
-  min-width: 132px;
+  max-width: 176px;
   margin: 0 20px 0 auto;
   padding: 0;
   list-style-type: none;
@@ -536,7 +538,7 @@ body {
 
 .subscribe-input {
   width: 452px;
-  height: 52px;
+  min-height: 52px;
   margin: 0;
   padding: 0 20px;
   border: none;
@@ -1318,6 +1320,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: end;
+  padding-top: 56px;
   gap: 32px;
 }
 
@@ -1569,6 +1572,10 @@ body {
   align-self: center;
 }
 
+.stars.one-stars {
+  width: 24px;
+}
+
 .stars.two-stars {
   width: 48px;
 }
@@ -1579,6 +1586,10 @@ body {
 
 .stars.four-stars {
   width: 96px;
+}
+
+.stars.five-stars {
+  width: 120px;
 }
 
 .product-card-rating {
