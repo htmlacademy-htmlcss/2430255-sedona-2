@@ -1320,6 +1320,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: end;
+  padding-top: 56px;
   gap: 32px;
 }
 
