@@ -207,12 +207,12 @@ body {
   height: 18px;
 }
 
-.user-menu-link:hover .user-menu-icon path,
-.user-menu-link:focus .user-menu-icon path {
+.user-menu-link:hover .user-menu-icon,
+.user-menu-link:focus .user-menu-icon {
   fill: #00000099;
 }
 
-.user-menu-link:active .user-menu-icon path {
+.user-menu-link:active .user-menu-icon {
   fill: #0000004d;
 }
 
@@ -606,12 +606,12 @@ body {
   outline: none;
 }
 
-.social-link:hover .social-icon path,
-.social-link:focus .social-icon path {
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
   fill: #68a2ca;
 }
 
-.social-link:active .social-icon path {
+.social-link:active .social-icon {
   fill: #68a2ca4d;
 }
 
@@ -648,12 +648,12 @@ body {
   height: 33px;
 }
 
-.academy-logo:hover .academy-icon path,
-.academy-logo:focus .academy-icon path {
+.academy-logo:hover .academy-icon,
+.academy-logo:focus .academy-icon {
   fill: #756157;
 }
 
-.academy-logo:active .academy-icon path {
+.academy-logo:active .academy-icon {
   fill: #7561574d;
 }
 
@@ -884,8 +884,8 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
-.btn-minus:hover svg path,
-.btn-plus:hover svg path {
+.btn-minus:hover svg,
+.btn-plus:hover svg {
   fill: #000000;
 }
 
@@ -894,8 +894,8 @@ body {
   outline: none;
 }
 
-.btn-minus:focus svg path,
-.btn-plus:focus svg path {
+.btn-minus:focus svg,
+.btn-plus:focus svg {
   fill: #000000;
 }
 
@@ -1068,12 +1068,12 @@ body {
   height: 13px;
 }
 
-.breadcrumbs-link:hover .breadcrumbs-icon path,
-.breadcrumbs-link:focus .breadcrumbs-icon path {
+.breadcrumbs-link:hover .breadcrumbs-icon,
+.breadcrumbs-link:focus .breadcrumbs-icon {
   fill: #ffffff99;
 }
 
-.breadcrumbs-link:active .breadcrumbs-icon path {
+.breadcrumbs-link:active .breadcrumbs-icon {
   fill: #ffffff4d;
 }
 
